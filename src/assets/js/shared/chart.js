@@ -1,6 +1,7 @@
 $(function () {
   /* ChartJS */
   'use strict';
+  
   if ($("#mixed-chart").length) {
     var chartData = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -968,5 +969,10 @@ $(function () {
     var ctx = document.getElementById('scatterChart').getContext('2d');
     new Chart(ctx, options);
     document.getElementById('scatter-chart-legend').innerHTML = barChart.generateLegend();
+  }
+
+  if($(".datepicker").length)
+  {
+    $(".datepicker").datepicker();
   }
 });
